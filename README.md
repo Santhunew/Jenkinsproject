@@ -18,7 +18,8 @@ Step-1: Jenkins Server Setup in Linux VM
 
 6.	Install Jenkins
            * Jenkins to be installed
-               sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+
+  	    sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
   https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
 echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
@@ -43,25 +44,27 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
                   password: 618d55d61e0840e2b113cd953d6916eb
   	
 8. Create Admin Account & Install Required Plugins in Jenkins
-**Note: I have created this job using the pipeline option.  not the freestyle. The freestyle-only beginner will use also very simple project we can go with freestyle
-      we can create a pipeline Two ways is there.
-          1, Declarative approach 2, Scripted approach**
+**Note: **I have created this job using the pipeline option.  not the freestyle. The freestyle-only beginner will also use very simple project. we can go with freestyle**
+
+ <b> ** There are Two ways to create or write the pipeline.
+          1, Declarative approach 2, Scripted approach****</br>
+
 **Interview notes: To identify the script -> starting with pipeline is called the Declarative approach and the script starting with None is called the Scripted approach.**
     **
 I am doing this job with a Declarative approach **
 
-**again** **because this is very important** 
+<be>**again** **because this is very important** 
 **Interview notes: To identify the script -> starting with pipeline is called the Declarative approach and the script starting with None is called the Scripted approach.**
     **
-I am doing this job with a Declarative approach **
+I am doing this job with a Declarative approach **</br>
 
 **Four stages required to create the Jenkins pipeline**
 ![Blank board](https://github.com/user-attachments/assets/5e501a69-39ae-42a8-a297-ab56a851ac0a)
-   stage-1: Get the code from the Git Hub
-   stage-2: Have to do the maven Build
-   stage-3: Build a docker image
-   stage-4: create the docker container
-
+   **stage-1: Get the code from the Git Hub
+     stage-2: Have to do the maven Build
+     stage-3: Build a docker image
+     stage-4: create the docker container
+**
 
 
 Step 2: Configure Maven as a Global Tool in Jenkins
