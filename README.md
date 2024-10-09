@@ -60,10 +60,10 @@ I am doing this job with a Declarative approach **</br>
 
 **Four stages required to create the Jenkins pipeline**
 ![Blank board](https://github.com/user-attachments/assets/5e501a69-39ae-42a8-a297-ab56a851ac0a)
-   **stage-1: Get the code from the Git Hub
+   **<ul>stage-1: Get the code from the Git Hub
      stage-2: Have to do the maven Build
      stage-3: Build a docker image
-     stage-4: create the docker container
+     stage-4: create the docker container</ul>
 **
 
 
