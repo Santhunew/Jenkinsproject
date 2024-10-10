@@ -66,6 +66,33 @@ I am doing this job with a Declarative approach **</br>
      stage-4: create the docker container</ul>
 **
 
+pipeline {
+    agent any
+    stages { 
+        stage('git clone') {
+            steps {
+                git 'https://github.com/Santhunew/Jenkinsproject'
+            }
+        }
+        stage('mvn build') {
+            steps {
+                sh 'mvn clean package'
+            }
+        }
+        stage('docker image') {
+            steps {
+                sh 'docker build -t img .'
+            }
+        }
+        stage('deployment') {
+            steps {
+                sh 'docker run -d -p 9090:8080 img'
+            }
+        }
+    }
+}
+
+
 
 Step 2: Configure Maven as a Global Tool in Jenkins
 
