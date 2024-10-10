@@ -67,25 +67,29 @@ I am doing this job with a Declarative approach **</br>
 **
 pipeline {
     agent any
-    stages { 
-        stage('git clone') {
+    
+    tools{
+        maven 'M3'
+    }
+    stages {
+        stage('Git Clone') {
             steps {
-                git 'https://github.com/Santhunew/Jenkinsproject'
+                git 'https://github.com/ashokitschool/maven-web-app'
             }
         }
-        stage('mvn build') {
+        stage('MVN Build') {
             steps {
                 sh 'mvn clean package'
             }
         }
-        stage('docker image') {
+        stage('Docker Image') {
             steps {
-                sh 'docker build -t img .'
+                sh 'docker build -t santhosh .'
             }
         }
-        stage('deployment') {
+        stage('Deployment') {
             steps {
-                sh 'docker run -d -p 9090:8080 img'
+                sh 'docker run -d -p 9090:8080 --name santhuc santhosh'
             }
         }
     }
@@ -94,8 +98,17 @@ pipeline {
 
 
 Step 2: Configure Maven as a Global Tool in Jenkins
+**Manage Jenkins -> Tools -> Maven Installation -> Add maven**
 
 Step-3: Setup Docker in Jenkins
+**curl -fsSL get.docker.com | /bin/bash
+sudo usermod -aG docker jenkins
+sudo usermod -aG docker ubuntu
+sudo systemctl restart jenkins
+sudo docker version**
+
+To list the docker image -> docket images
+To list the docker container -> docket ps -a
 
 Step 4: Create a Jenkins Job
 
