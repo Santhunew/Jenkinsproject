@@ -117,6 +117,7 @@ Step - 5: Trigger Jenkins Job
 Step 6: Enable host port in security group inbound rules
 
 Step - 7: Access Application in Browser
+![Jenkins pipeline ](https://github.com/user-attachments/assets/43f04981-b7c1-44bc-bd80-17fd9f39feee)
 
 
 ![output](https://github.com/user-attachments/assets/b528175e-73eb-46f6-b99b-fcd4eb955c66)
