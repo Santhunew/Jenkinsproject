@@ -118,5 +118,9 @@ Step 6: Enable host port in security group inbound rules
 
 Step - 7: Access Application in Browser
 
+
+![output](https://github.com/user-attachments/assets/b528175e-73eb-46f6-b99b-fcd4eb955c66)
+
+
 Step 8: After your practice, delete resources we have used in AWS Cloud to avoid billing
 
