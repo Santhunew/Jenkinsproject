@@ -65,7 +65,6 @@ I am doing this job with a Declarative approach **</br>
      stage-3: Build a docker image
      stage-4: create the docker container</ul>
 **
-
 pipeline {
     agent any
     stages { 
